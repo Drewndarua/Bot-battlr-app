@@ -1,5 +1,5 @@
 import React from "react";
-import { BotCard } from "./BotCard";
+import BotCard from "./BotCard";
 
 const BotCollection = ({ bots, enlistedBots, onEnlist, onDischarge }) => {
   return (
@@ -12,7 +12,7 @@ const BotCollection = ({ bots, enlistedBots, onEnlist, onDischarge }) => {
             bot={bot}
             onEnlist={onEnlist}
             onDischarge={onDischarge}
-            isEnlisted={enlistedBots.some((enlisted) => enlisted.id === bot.id)}
+            isEnlisted={enlistedBots((enlisted) => enlisted.id === bot.id)}
           />
         ))}
       </div>
