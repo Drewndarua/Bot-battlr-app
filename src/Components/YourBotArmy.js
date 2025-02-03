@@ -1,7 +1,8 @@
 import React from "react";
+import BotCard from "./BotCard";
 
-const YourBotArmy = () => {
-  return <div>YourBotArmy</div>;
-};
+function YourBotArmy({ enlisted, onRelease, onDischarge }) {
+  return <div></div>;
+}
 
 export default YourBotArmy;
