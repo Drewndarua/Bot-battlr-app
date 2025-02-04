@@ -44,7 +44,7 @@ function App() {
       </header>
       <main className="main-content">
         <YourBotArmy
-          army={army}
+          enlistedBots={army}
           onRelease={onRelease}
           dischargeBot={handleDischarge}
         />

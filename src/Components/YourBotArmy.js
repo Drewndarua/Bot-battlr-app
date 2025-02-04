@@ -16,15 +16,22 @@ function YourBotArmy({ enlistedBots = [], onRelease, onDischarge }) {
   return (
     <div>
       <h2>Your Bot Army</h2>
-      <div>
+      <div className="army-grid">
         {enlistedBots.map((bot) => (
-          <BotCard
-            key={bot.id}
-            bot={bot}
-            onRelease={onRelease}
-            onDischarge={onDischarge}
-            isEnlisted={true}
-          />
+          <div key={bot.id} className="army-bot">
+            <BotCard
+              bot={bot}
+              onRelease={onRelease}
+              onDischarge={onDischarge}
+              isEnlisted={true}
+            />
+            <button
+              className="remove-button"
+              onClick={() => onRelease(bot)}
+              title="Remove from Army">
+              ❌ Remove
+            </button>
+          </div>
         ))}
       </div>
     </div>
