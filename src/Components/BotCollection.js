@@ -12,7 +12,7 @@ const BotCollection = ({ bots, enlistedBots, onEnlist, onDischarge }) => {
             bot={bot}
             onEnlist={onEnlist}
             onDischarge={onDischarge}
-            isEnlisted={enlistedBots((enlisted) => enlisted.id === bot.id)}
+            isEnlisted={enlistedBots.some((enlisted) => enlisted.id === bot.id)}
           />
         ))}
       </div>

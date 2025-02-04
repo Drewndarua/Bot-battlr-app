@@ -36,8 +36,12 @@ function App() {
   };
 
   return (
-    <div>
-      <h1 className="header-title">Bot Army</h1>
+    <div className="app">
+      <header className="header">
+        <div className="header-content">
+          <h1 className="header-title">Bot Army</h1>
+        </div>
+      </header>
       <main className="main-content">
         <YourBotArmy
           army={army}
@@ -46,7 +50,7 @@ function App() {
         />
         <BotCollection
           bots={bots}
-          enlistedBots={handleEnlist}
+          enlistedBots={army}
           onEnlist={handleEnlist}
           onDischarge={handleDischarge}
         />
